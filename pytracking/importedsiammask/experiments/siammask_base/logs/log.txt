@@ -1,0 +1,173 @@
+[2024-05-02 13:59:34,154-rk0-train_siammask.py#127] 
+PyTorch version: 1.10.0+cu102
+Is debug build: False
+CUDA used to build PyTorch: 10.2
+ROCM used to build PyTorch: N/A
+
+OS: Ubuntu 18.04.6 LTS (x86_64)
+GCC version: (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
+Clang version: Could not collect
+CMake version: version 3.10.2
+Libc version: glibc-2.17
+
+Python version: 3.6.13 |Anaconda, Inc.| (default, Jun  4 2021, 14:25:59)  [GCC 7.5.0] (64-bit runtime)
+Python platform: Linux-5.4.0-150-generic-x86_64-with-debian-buster-sid
+Is CUDA available: True
+CUDA runtime version: 9.1.85
+GPU models and configuration: GPU 0: NVIDIA TITAN Xp
+Nvidia driver version: 470.182.03
+cuDNN version: Probably one of the following:
+/usr/local/cuda-10.2/targets/x86_64-linux/lib/libcudnn.so.8.3.0
+/usr/local/cuda-10.2/targets/x86_64-linux/lib/libcudnn_adv_infer.so.8.3.0
+/usr/local/cuda-10.2/targets/x86_64-linux/lib/libcudnn_adv_train.so.8.3.0
+/usr/local/cuda-10.2/targets/x86_64-linux/lib/libcudnn_cnn_infer.so.8.3.0
+/usr/local/cuda-10.2/targets/x86_64-linux/lib/libcudnn_cnn_train.so.8.3.0
+/usr/local/cuda-10.2/targets/x86_64-linux/lib/libcudnn_ops_infer.so.8.3.0
+/usr/local/cuda-10.2/targets/x86_64-linux/lib/libcudnn_ops_train.so.8.3.0
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+
+Versions of relevant libraries:
+[pip3] numpy==1.15.4
+[pip3] torch==1.10.0
+[pip3] torchaudio==0.10.0
+[pip3] torchvision==0.2.1
+[conda] blas                      1.0                         mkl  
+[conda] cudatoolkit               9.0                  h13b8566_0  
+[conda] mkl                       2018.0.3                      1  
+[conda] mkl_fft                   1.0.6            py36h7dd41cf_0  
+[conda] mkl_random                1.0.1            py36h4414c95_1  
+[conda] numpy                     1.15.4                   pypi_0    pypi
+[conda] numpy-base                1.15.4           py36h81de0dd_0  
+[conda] pytorch                   0.4.1            py36ha74772b_0  
+[conda] torchvision               0.2.1                    pypi_0    pypi
+        OpenCV (3.4.3)
+[2024-05-02 13:59:34,154-rk0-train_siammask.py#128] Namespace(arch='', batch=64, clip=10.0, config='config.json', epochs=20, log='logs/log.txt', log_dir='board', lr=0.001, momentum=0.9, pretrained='', print_freq=10, resume='snapshot/checkpoint_e9.pth', save_dir='snapshot', start_epoch=0, weight_decay=0.0001, workers=20)
+[2024-05-02 13:59:34,155-rk0-train_siammask.py#131] config 
+{
+    "network": {
+        "arch": "Custom"
+    },
+    "hp": {
+        "instance_size": 255,
+        "base_size": 8
+    },
+    "lr": {
+        "feature_lr_mult": 1.0,
+        "rpn_lr_mult": 1.0,
+        "mask_lr_mult": 1.0,
+        "type": "log",
+        "start_lr": 0.005,
+        "end_lr": 0.0025,
+        "warmup": {
+            "start_lr": 0.001,
+            "end_lr": 0.005,
+            "type": "step",
+            "step": 1,
+            "epoch": 5
+        }
+    },
+    "loss": {
+        "weight": [
+            1.0,
+            1.2,
+            36
+        ],
+        "reg": {
+            "loss": "L1Loss"
+        },
+        "cls": {
+            "split": true
+        }
+    },
+    "train_datasets": {
+        "datasets": {
+            "ytb_vos": {
+                "root": "../../data/ytb_vos/crop511",
+                "anno": "../../data/ytb_vos/train.json",
+                "num_use": 200000,
+                "frame_range": 20
+            },
+            "vid": {
+                "root": "../../data/vid/crop511",
+                "anno": "../../data/vid/train.json",
+                "num_use": 200000,
+                "frame_range": 100
+            },
+            "coco": {
+                "root": "../../data/coco/crop511",
+                "anno": "../../data/coco/train2017.json",
+                "frame_range": 1
+            },
+            "det": {
+                "root": "../../data/det/crop511",
+                "anno": "../../data/det/train.json",
+                "num_use": 100000,
+                "frame_range": 1
+            }
+        },
+        "template_size": 127,
+        "search_size": 255,
+        "base_size": 8,
+        "size": 25,
+        "num": 600000,
+        "augmentation": {
+            "template": {
+                "shift": 4,
+                "scale": 0.05
+            },
+            "search": {
+                "shift": 64,
+                "scale": 0.18,
+                "blur": 0.18
+            },
+            "neg": 0.2,
+            "gray": 0.25
+        }
+    },
+    "val_datasets": {
+        "datasets": {
+            "vid": {
+                "root": "../../data/vid/crop511",
+                "anno": "../../data/vid/val.json",
+                "num_use": 1000
+            }
+        },
+        "template_size": 127,
+        "search_size": 255,
+        "size": 17,
+        "num": 1000,
+        "augmentation": {
+            "template": {
+                "shift": 0,
+                "scale": 0.0
+            },
+            "search": {
+                "shift": 12,
+                "scale": 0.18
+            },
+            "neg": 0,
+            "gray": 0
+        }
+    },
+    "anchors": {
+        "stride": 8,
+        "ratios": [
+            0.33,
+            0.5,
+            1,
+            2,
+            3
+        ],
+        "scales": [
+            8
+        ],
+        "round_dight": 0
+    },
+    "clip": {
+        "feature": 10.0,
+        "rpn": 10.0,
+        "split": false
+    }
+}
+[2024-05-02 13:59:34,167-rk0-train_siammask.py# 78] build train dataset

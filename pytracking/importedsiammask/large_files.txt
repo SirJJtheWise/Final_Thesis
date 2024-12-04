@@ -1,0 +1,50 @@
+./data/DAVIS-2017-trainval-480p.zip
+./experiments/siammask_sharp/SiamMask_DAVIS.pth
+./Final data/16.12.2022/2/plaque 0038.imf
+./Final data/16.12.2022/1/IM_0028
+./Final data/16.12.2022/4/IM_0055
+./Final data/16.12.2022/5/IM_0060
+./Final data/16.12.2022/3/IM_0049
+./Final data/05.05.2023/2/IM_0012
+./Final data/05.05.2023/5/IM_0023
+./Final data/05.05.2023/5/IM_0024
+./Final data/05.05.2023/3/IM_0016
+./Final data/05.05.2023/3/IM_0015
+./Final data/05.05.2023/3/IM_0017
+./Final data/06.04.2023/2/IM_0153
+./Final data/06.04.2023/1/IM_0149
+./Final data/18.10.2022/DICOM/plaque 0002.imf
+./Final data/18.10.2022/DICOM/vessel 0001.imf
+./Final data/16.11.2022/2/IM_0020
+./Final data/16.11.2022/2/IM_0022
+./Final data/16.11.2022/2/IM_0026
+./Final data/16.11.2022/2/IM_0024
+./Final data/16.11.2022/1/IM_0010
+./Final data/16.11.2022/1/IM_0008
+./Final data/03.02.2023/8/IM_0137
+./Final data/03.02.2023/2/IM_0105
+./Final data/03.02.2023/2/IM_0104
+./Final data/03.02.2023/1/IM_0103
+./Final data/03.02.2023/4/IM_0113
+./Final data/03.02.2023/6/IM_0123
+./Final data/30.06.2023/8/IM_0187
+./Final data/30.06.2023/8/IM_0188
+./Final data/30.06.2023/4/IM_0170
+./Final data/30.06.2023/4/IM_0171
+./Final data/30.06.2023/6/IM_0175
+./Final data/30.06.2023/6/IM_0176
+./Final data/30.06.2023/7/IM_0181
+./Final data/30.06.2023/7/IM_0182
+./Final data/30.06.2023/7/IM_0183
+./Final data/30.06.2023/3/IM_0167
+./Final data/19.01.2023/2/IM_0069
+./Final data/19.01.2023/2/IM_0071
+./Final data/19.01.2023/1/IM_0065
+./Final data/19.01.2023/1/IM_0064
+./Final data/19.01.2023/1/IM_0067
+./Final data/19.01.2023/1/IM_0066
+./Final data/19.01.2023/4/IM_0076
+./Final data/19.01.2023/5/IM_0080
+./Final data/19.01.2023/6/IM_0087
+./Final data/19.01.2023/6/IM_0088
+./Final data/19.01.2023/7/IM_0091
