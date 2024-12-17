@@ -10,7 +10,7 @@ if conda env list | grep -q "$NEW_ENV_NAME"; then
 fi
 
 # Create the new environment from the YAML file
-conda env create --name "$NEW_ENV_NAME" --file environment.yml
+conda env create --name "$NEW_ENV_NAME" --file env.yml
 
 # Activate the new environment
 source activate "$NEW_ENV_NAME"
