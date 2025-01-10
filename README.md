@@ -47,7 +47,7 @@ cd ./Network_Git
 # Install the required packages
 chmod u+x setup.sh
 ./setup.sh
-conda activate theis
+conda activate thesis
 ### Quick run
 
 cd ./pytracking/ltr
