@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the name for the new environment
-NEW_ENV_NAME="new_env_name"
+NEW_ENV_NAME="thesis"
 
 # Check if the environment already exists
 if conda env list | grep -q "$NEW_ENV_NAME"; then

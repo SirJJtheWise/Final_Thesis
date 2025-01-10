@@ -31,7 +31,7 @@ List any prerequisites that need to be installed for your project. For example:
 
 - Python 3
 - pip
-- PyTorch
+- conda
 
 ### Installing
 
@@ -45,8 +45,9 @@ git clone https://github.com/your-username/your-repo-name.git
 cd ./Network_Git
 
 # Install the required packages
-pip install -r requirements.txt
-
+chmod u+x setup.sh
+./setup.sh
+conda activate theis
 ### Quick run
 
 cd ./pytracking/ltr
